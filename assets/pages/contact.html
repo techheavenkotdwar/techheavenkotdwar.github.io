@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us - Tech Heaven</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/overall.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="../images/logo.png" alt="Tech Heaven Logo"> <!-- Placeholder for logo -->
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="online.html">Online Courses</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="enroll.html" class="cta-btn">Enroll Now</a>
+</header>
+
+<!-- Contact Us Section -->
+<section class="contact-section">
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <!-- Contact Image -->
+        <div class="contact-image">
+            <img src="../images/contact-us.png" alt="Contact Us Image" class="contact-img"> <!-- Placeholder for contact image -->
+        </div>
+
+        <!-- Contact Information -->
+        <div class=".contact-section">
+        <p>
+            If you have any queries or would like more information about our courses, feel free to reach out to us. We are always here to assist you.
+        </p>
+
+        <div class="contact-details">
+            <h2>Our Contact Details</h2>
+            <p><strong>Enquiry Number:</strong> 8218666169</p>
+            <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar (U.K.)</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="../php/submit-contact.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer>
+    <p>© 2024 Tech Heaven. All rights reserved.</p>
+    <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
+</footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

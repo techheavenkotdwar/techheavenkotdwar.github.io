@@ -1,0 +1,127 @@
+/* General Styles */
+h2 {
+    font-size: xx-large;
+}
+
+/* Hero Section with Full-Screen GIF */
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    gap: 20px;
+}
+
+.contact-image {
+    position: relative;
+    width: 90%;
+    margin: 30px auto;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-img {
+    height: 500px;
+    width: 100%;
+}
+
+.cta-btn {
+    margin-top: 10px;
+}
+
+/* About Us Section */
+.contact-section{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #1a1a1a; /* Slightly lighter than the background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px; /* Set a max width for the form */
+    margin: 30px auto; /* Center the form on the page */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Increase size for visibility */
+    color: var(--accent-color); /* Use accent color for the header */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+    display: block; /* Ensure labels are block-level */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels for emphasis */
+    color: #e0e0e0; /* Light color for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Space inside inputs */
+    border: 1px solid #333; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #282828; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid var(--accent-color); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%; /* Full-width button */
+    padding: 10px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: var(--accent-color); /* Use accent color */
+    color: #ffffff; /* White text */
+    font-size: 1.1rem; /* Slightly larger text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+button[type="submit"]:hover {
+    background-color: #0097a7; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem; /* Smaller header text */
+    }
+}
+
+
+

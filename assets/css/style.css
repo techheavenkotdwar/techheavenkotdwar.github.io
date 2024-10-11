@@ -1,0 +1,125 @@
+/* General Styles */
+h2 {
+    font-size: xxx-large;
+}
+
+h3 {
+    font-size: xx-large;
+}
+
+
+/* Hero Section with Full-Screen GIF */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Sends GIF to the background */
+    overflow: hidden;
+}
+
+.background-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stretch GIF to cover full area */
+}
+
+.content-overlay {
+    position: relative;
+    text-align: center;
+    z-index: 1; /* Brings text content in front of GIF */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    gap: 20px;
+}
+
+/* Courses Section */
+.courses-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000;
+}
+
+.course {
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.course-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+.cta-btn {
+    margin-top: 10px;
+}
+
+/* Online Courses Section */
+.online-section, .about-section, .enrollment-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.online-course {
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.online-course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
