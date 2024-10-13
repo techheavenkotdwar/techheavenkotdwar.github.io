@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tech Heaven</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+            color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Hover effects for links */
+        .nav-link, /* Targets navigation links */
+        .social-links a, /* Targets social links in the footer */
+        footer a { /* Targets links in the footer */
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .social-links a:hover, footer a:hover {
+            color: cyan;
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            position: relative;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .background-gif {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+            object-fit: cover;
+            min-height: 100%;
+        }
+
+        .courses-section .course,
+        .online-section .online-course {
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .courses-section .course:hover,
+        .online-section .online-course:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .online-course {
+            height: 300px;
+            position: relative;
+        }
+
+        .online-course img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .course-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+
+
+        footer {
+            background-color: #111;
+            margin-top: auto;
+        }
+
+        /* Media Queries for 320px screens */
+        @media (max-width: 320px) {
+            /* Add spacing between buttons in .cta-buttons */
+            .cta-buttons a {
+                margin-bottom: 10px; /* Adds space between buttons */
+            }
+
+            /* Reduce font size for navigation links */
+            .nav-link {
+                font-size: 12px; /* Adjust font size for smaller screens */
+            }
+
+            .nav {
+                flex-direction: column; /* Stack nav items vertically on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-dark text-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Tech Heaven Logo" height="50">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/online.html">Online Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="assets/pages/enroll.html" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Full-Screen GIF Backdrop -->
+    <section id="home" class="hero-section">
+        <div class="background-container">
+            <img src="assets/images/background.gif" alt="Background GIF" class="background-gif">
+        </div>
+        <div class="content-overlay">
+            <h1>Tech Heaven</h1>
+            <p>Empower your skills with industry-recognized computer courses.</p>
+            <div class="cta-buttons">
+                <a href="#courses" class="btn btn-primary">Explore Our Courses</a>
+                <a href="#online" class="btn btn-secondary">Get Started with Online Learning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section container my-5">
+        <h2 class="text-center">Our Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="course" style="background-image: url('assets/images/cca.png'); height: 200px;">
+                    <div class="course-content">
+                        <h3>CCA (Certificate in Computer Applications)</h3>
+                        <p><!-- Add CCA description here --></p>
+                        <a href="assets/pages/cca.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course" style="background-image: url('assets/images/dca.png'); height: 200px;">
+                    <div class="course-content">
+                        <h3>DCA (Diploma in Computer Applications)</h3>
+                        <p><!-- Add DCA description here --></p>
+                        <a href="assets/pages/dca.html" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="course" style="background-image: url('assets/images/pdca.png'); height: 200px;">
+                    <div class="course-content">
+                        <h3>PDCA (Professional Diploma in Computer Applications)</h3>
+                        <p><!-- Add PDCA description here --></p>
+                        <a href="assets/pages/pdca.html" class="btn btn-primary">Join Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Courses Section -->
+    <section id="online" class="online-section container my-5">
+        <h2 class="text-center">Online Courses</h2>
+        <div class="online-course" style="background-image: url('assets/images/online.png'); height: 300px;">
+            <div class="course-content">
+                <h2>Learn from Anywhere with Our Online Courses</h2>
+                <p><!-- Add online course description here --></p>
+                <a href="assets/pages/online.html" class="btn btn-primary">Browse Online Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Tech Heaven. All rights reserved.</p>
+        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
+        <ul class="social-links list-unstyled d-flex justify-content-center">
+            <li class="mx-2"><a href="#">Facebook</a></li>
+            <li class="mx-2"><a href="#">Twitter</a></li>
+            <li class="mx-2"><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
