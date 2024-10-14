@@ -150,11 +150,21 @@
                         </div>
                         <div class="form-group">
                             <label for="qualification">Highest Qualification</label>
-                            <input type="text" id="qualification" name="qualification" class="form-control" required>
+                            <select id="qualification" name="qualification" class="form-control" required>
+                                <option value="" disabled selected>Select your highest qualification</option>
+                                <option value="Primary">Primary</option>
+                                <option value="Secondary">Secondary</option>
+                                <option value="High School">High School</option>
+                                <option value="Senior Secondary">Senior Secondary</option>
+                                <option value="Voactional and Traning (Diploma)">Voactional and Traning (Diploma)</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="course">Course You Want</label>
                             <select id="course" name="course" class="form-control" required>
+                                <option value="" disabled selected>Select the course you want</option>
                                 <option value="CCA">CCA</option>
                                 <option value="DCA">DCA</option>
                                 <option value="PDCA">PDCA</option>
