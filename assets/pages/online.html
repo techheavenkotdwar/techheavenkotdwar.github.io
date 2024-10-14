@@ -10,46 +10,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
             color: cyan;
-        }
-
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-
-        header .logo img {
-            height: 50px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: cyan;
-        }
-
-        nav a.active {
-            color: cyan;
-            font-weight: bold;
-            border-bottom: 2px solid cyan;
-            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .online-courses-section {
@@ -66,6 +35,10 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+        }
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
         }
 
         .online-course:hover {
@@ -85,91 +58,70 @@
             margin-top: 10px;
         }
 
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: cyan;
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Header Section -->
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 logo">
-                <img src="../images/logo.png" alt="Tech Heaven Logo">
-            </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="online.html" class="active">Online Courses</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 text-right">
-                <a href="enroll.html" class="btn btn-primary cta-btn">Enroll Now</a>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <!-- Online Courses Section -->
-    <section class="online-courses-section container">
-        <h1 class="text-center">Our Online Courses</h1>
-        <p class="text-center">At Tech Heaven, we offer a variety of online courses designed to fit your schedule and learning needs. Explore our online programs below:</p>
+    <main>
+        <!-- Online Courses Section -->
+        <section class="online-courses-section container">
+            <h1 class="text-center">Our Online Courses</h1>
+            <p class="text-center">At Tech Heaven, we offer a variety of online courses designed to fit your schedule and learning needs. Explore our online programs below:</p>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="online-course">
-                    <h2>Introduction to Computer Basics</h2>
-                    <p>This course provides a comprehensive overview of basic computer skills, including MS Office applications and internet usage.</p>
-                    <a href="../pages/online-courses/itcb.html" class="btn btn-primary">Learn More</a>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="online-course">
+                        <h2>Introduction to Computer Basics</h2>
+                        <p>This course provides a comprehensive overview of basic computer skills, including MS Office applications and internet usage.</p>
+                        <a href="../pages/online-courses/itcb.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="online-course">
+                        <h2>Advanced MS Excel</h2>
+                        <p>Master Excel with our advanced course, covering formulas, functions, and data analysis tools for better productivity.</p>
+                        <a href="../pages/online-courses/adex.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="online-course">
+                        <h2>Web Development Basics</h2>
+                        <p>Learn the fundamentals of web development, including HTML, CSS, and JavaScript, to build your own websites.</p>
+                        <a href="../pages/online-courses/webdb.html" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="col-md-4">
-                <div class="online-course">
-                    <h2>Advanced MS Excel</h2>
-                    <p>Master Excel with our advanced course, covering formulas, functions, and data analysis tools for better productivity.</p>
-                    <a href="../pages/online-courses/adex.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
 
-            <div class="col-md-4">
-                <div class="online-course">
-                    <h2>Web Development Basics</h2>
-                    <p>Learn the fundamentals of web development, including HTML, CSS, and JavaScript, to build your own websites.</p>
-                    <a href="../pages/online-courses/webdb.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2"><a href="#">Facebook</a></li>
-            <li class="mx-2"><a href="#">Twitter</a></li>
-            <li class="mx-2"><a href="#">LinkedIn</a></li>
-        </ul>
-    </footer>
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

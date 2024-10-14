@@ -10,46 +10,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
             color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-
-        header .logo img {
-            height: 50px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: cyan;
-        }
-
-        nav a.active {
-            color: cyan; /* Change text color */
-            font-weight: bold; /* Make the text bold */
-            border-bottom: 2px solid cyan; /* Optional: Bottom border for highlight */
-            transition: all 0.3s ease; /* Smooth transition */
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
         }
 
         .about-section {
@@ -62,86 +35,64 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
-
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: cyan;
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Header Section -->
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 logo">
-                <img src="../images/logo.png" alt="Tech Heaven Logo">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- About Us Section -->
+        <section class="about-section container">
+            <h1 class="text-center" style="font-size: 3rem; margin-right: 10px; margin-left: 10px;">About Tech Heaven</h1>
+
+            <!-- Image Area -->
+            <div class="about-image text-center">
+                <img src="../images/high-res/about-us.png" alt="Tech Heaven About Us Image">
             </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="about.html" class="active">About Us</a></li>
-                        <li><a href="online.html">Online Courses</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 text-right">
-                <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- About Us Section -->
-    <section class="about-section container">
-        <h1 class="text-center" style="font-size: 3rem; margin-right: 10px; margin-left: 10px;">About Tech Heaven</h1>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                Welcome to <strong>Tech Heaven</strong>, where we are committed to providing quality education in the field of computer applications.
+                Established in the scenic city of <strong>Kotdwar, Uttarakhand</strong>, we strive to empower students with the knowledge and skills required to thrive in the tech-driven world.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                We are proud to be registered with <strong>DITRP</strong>, an ISO-certified agency that ensures our curriculum and operations meet the highest standards of education. Our team of experienced educators is dedicated to delivering a top-notch syllabus tailored to the needs of aspiring IT professionals.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                At <strong>Tech Heaven</strong>, our mission is simple – to make quality computer education accessible to everyone. Our students benefit from our carefully crafted courses, designed to equip them with both theoretical knowledge and practical skills.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                With a focus on real-world applications and career growth, we offer a wide range of courses that cater to beginners, intermediates, and advanced learners. Whether you’re starting from scratch or looking to advance your IT career, Tech Heaven has something for you.
+            </p>
+            <h2 style="margin-left: 10px;">Our Location</h2>
+            <p style="margin-left: 10px; margin-right: 10px;">We are proudly based in <strong>Uttarakhand, India</strong>, and serve students across the region and beyond.</p>
+        </section>
+    </main>
 
-        <!-- Image Area -->
-        <div class="about-image text-center">
-            <img src="../images/about-us.png" alt="Tech Heaven About Us Image">
-        </div>
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
 
-        <p style="margin-left: 10px; margin-right: 10px;">
-            Welcome to <strong>Tech Heaven</strong>, where we are committed to providing quality education in the field of computer applications.
-            Established in the scenic city of <strong>Kotdwar, Uttarakhand</strong>, we strive to empower students with the knowledge and skills required to thrive in the tech-driven world.
-        </p>
-        <p style="margin-left: 10px; margin-right: 10px;">
-            We are proud to be registered with <strong>DITRP</strong>, an ISO-certified agency that ensures our curriculum and operations meet the highest standards of education. Our team of experienced educators is dedicated to delivering a top-notch syllabus tailored to the needs of aspiring IT professionals.
-        </p>
-        <p style="margin-left: 10px; margin-right: 10px;">
-            At <strong>Tech Heaven</strong>, our mission is simple – to make quality computer education accessible to everyone. Our students benefit from our carefully crafted courses, designed to equip them with both theoretical knowledge and practical skills.
-        </p>
-        <p style="margin-left: 10px; margin-right: 10px;">
-            With a focus on real-world applications and career growth, we offer a wide range of courses that cater to beginners, intermediates, and advanced learners. Whether you’re starting from scratch or looking to advance your IT career, Tech Heaven has something for you.
-        </p>
-        <h2 style="margin-left: 10px;">Our Location</h2>
-        <p style="margin-left: 10px; margin-right: 10px;">We are proudly based in <strong>Uttarakhand, India</strong>, and serve students across the region and beyond.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2"><a href="#">Facebook</a></li>
-            <li class="mx-2"><a href="#">Twitter</a></li>
-            <li class="mx-2"><a href="#">LinkedIn</a></li>
-        </ul>
-    </footer>
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -10,46 +10,19 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
             color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-
-        header .logo img {
-            height: 50px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: cyan;
-        }
-
-        nav a.active {
-            color: cyan; /* Change text color */
-            font-weight: bold; /* Make the text bold */
-            border-bottom: 2px solid cyan; /* Optional: Bottom border for highlight */
-            transition: all 0.3s ease; /* Smooth transition */
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
         }
 
         .hero-section {
@@ -97,22 +70,6 @@
             color: black;
         }
 
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: cyan;
-        }
-
         /* Hover effect for syllabus cards */
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -135,116 +92,111 @@
 
 <body>
     
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 logo">
-                <img src="../images/logo.png" alt="Tech Heaven Logo">
-            </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="courses.html" class="active">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="online.html">Online Courses</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 text-right">
-                <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
-            </div>
-        </div>
-    </header>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
 
-    <!-- Hero Section with Full-Screen Backdrop Image -->
-    <section id="cca-hero" class="hero-section">
-        <div class="background-container">
-            <img src="../images/dca-bg.png" alt="CCA Backdrop" class="background-image">
-        </div>
-        <div class="content-overlay">
-            <h1>Diploma in Computer Applications (DCA)</h1>
-            <p>Prepare yourself for a successful career in technology.</p>
-            <a href="enroll.html" class="cta-btn">Enroll Now</a>
-        </div>
-    </section>
-
-    <div class="margins container my-5">
-        <!-- Course Overview Section -->
-        <section id="overview" class="course-overview mb-5">
-            <h2>Course Overview</h2>
-            <p>The Diploma in Computer Applications (DCA) program is designed to provide students with a comprehensive understanding of the various aspects of computer applications. The curriculum includes both theoretical and practical components, enabling students to develop the skills necessary for a successful career in IT.</p>
+    <main>
+        <!-- Hero Section with Full-Screen Backdrop Image -->
+        <section id="cca-hero" class="hero-section">
+            <div class="background-container">
+                <img src="../images/high-res/dca-bg.png" alt="CCA Backdrop" class="background-image">
+            </div>
+            <div class="content-overlay">
+                <h1>Diploma in Computer Applications (DCA)</h1>
+                <p>Prepare yourself for a successful career in technology.</p>
+                <a href="enroll.html" class="cta-btn">Enroll Now</a>
+            </div>
         </section>
 
-        <!-- Course Syllabus Section -->
-        <section id="syllabus" class="course-syllabus mb-5">
-            <h2>Course Syllabus</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">3 months</div>
-                        <div class="card-body">
-                            <p class="card-text">Basic Computer Skills, HTML, Hindi/English Typing, Personality Development</p>
+        <div class="margins container my-5">
+            <!-- Course Overview Section -->
+            <section id="overview" class="course-overview mb-5">
+                <h2>Course Overview</h2>
+                <p>The Diploma in Computer Applications (DCA) program is designed to provide students with a comprehensive understanding of the various aspects of computer applications. The curriculum includes both theoretical and practical components, enabling students to develop the skills necessary for a successful career in IT.</p>
+            </section>
+
+            <!-- Course Syllabus Section -->
+            <section id="syllabus" class="course-syllabus mb-5">
+                <h2>Course Syllabus</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-dark mb-3">
+                            <div class="card-header">3 months</div>
+                            <div class="card-body">
+                                <p class="card-text">Basic Computer Skills, HTML, Hindi/English Typing, Personality Development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-dark mb-3">
+                            <div class="card-header">6 months</div>
+                            <div class="card-body">
+                                <p class="card-text">C Language, CCC, Advanced Excel, Object-Oriented Programming (OOPs)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-dark mb-3">
+                            <div class="card-header">12 months</div>
+                            <div class="card-body">
+                                <p class="card-text">C++, Python, Web Designing/ Tally Prime with GST</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">6 months</div>
-                        <div class="card-body">
-                            <p class="card-text">C Language, CCC, Advanced Excel, Object-Oriented Programming (OOPs)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-white bg-dark mb-3">
-                        <div class="card-header">12 months</div>
-                        <div class="card-body">
-                            <p class="card-text">C++, Python, Web Designing/ Tally Prime with GST</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Fees Section -->
-        <section id="fees" class="course-fees mb-5">
-            <h2>Course Fees</h2>
-            <p>The course fees for the DCA program are <strong>Rs.800/- per month</strong>.</p>
-        </section>
+            <!-- Fees Section -->
+            <section id="fees" class="course-fees mb-5">
+                <h2>Course Fees</h2>
+                <p>The course fees for the DCA program are <strong>Rs.800/- per month</strong>.</p>
+            </section>
 
-        <!-- Career Opportunities Section -->
-        <section id="career-opportunities" class="career-opportunities mb-5">
-            <h2>Career Opportunities</h2>
-            <p>Upon completing the DCA course, students will be equipped with the skills to pursue IT level roles such as:</p>
-            <ul>
-                <li>Software Developer</li>
-            <li>Web Developer</li>
-            <li>System Analyst</li>
-            <li>Database Administrator</li>
-            <li>IT Support Specialist</li>
-            <li>Project Manager</li>
-            </ul>
-        </section>
+            <!-- Career Opportunities Section -->
+            <section id="career-opportunities" class="career-opportunities mb-5">
+                <h2>Career Opportunities</h2>
+                <p>Upon completing the DCA course, students will be equipped with the skills to pursue IT level roles such as:</p>
+                <ul>
+                    <li>Software Developer</li>
+                <li>Web Developer</li>
+                <li>System Analyst</li>
+                <li>Database Administrator</li>
+                <li>IT Support Specialist</li>
+                <li>Project Manager</li>
+                </ul>
+            </section>
 
-        <!-- Enrollment Section -->
-        <section id="enroll" class="enrollment-section mb-5 text-center">
-            <h2>Ready to Enroll?</h2>
-            <br>
-            <a href="enroll.html" class="cta-btn">Enroll Now</a>
-        </section>
-    </div>
+            <!-- Enrollment Section -->
+            <section id="enroll" class="enrollment-section mb-5 text-center">
+                <h2>Ready to Enroll?</h2>
+                <br>
+                <a href="enroll.html" class="cta-btn">Enroll Now</a>
+            </section>
+        </div>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2"><a href="#">Facebook</a></li>
-            <li class="mx-2"><a href="#">Twitter</a></li>
-            <li class="mx-2"><a href="#">LinkedIn</a></li>
-        </ul>
-    </footer>
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

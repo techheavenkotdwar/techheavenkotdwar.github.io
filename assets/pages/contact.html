@@ -10,45 +10,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
             color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-
-        header .logo img {
-            height: 50px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: cyan;
-        }
-
-        nav a.active {
-            color: cyan;
-            font-weight: bold;
-            text-decoration: underline;
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
         }
 
         .contact-section {
@@ -60,22 +35,6 @@
             height: auto;
             border-radius: 10px;
             margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: cyan;
         }
 
         /* Media Query for 320px screen */
@@ -95,79 +54,73 @@
 <body>
 
     <!-- Header Section -->
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 logo">
-                <img src="../images/logo.png" alt="Tech Heaven Logo">
-            </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="online.html">Online Courses</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 text-right">
-                <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <!-- Contact Us Section -->
-    <section class="contact-section container">
-        <h1 class="text-center">Contact Us</h1>
+    <main>
+        <!-- Contact Us Section -->
+        <section class="contact-section container">
+            <h1 class="text-center">Contact Us</h1>
 
-        <div class="row" >
-            <div class="col-md-6 text-center">
-                <img src="../images/contact-us.png" alt="Contact Us Image" class="contact-img">
-            </div>
-
-            <div class="col-md-6">
-                <p style="margin-left: 10px;">If you have any queries or would like more information about our courses, feel free to reach out to us. We are always here to assist you.</p>
-
-                <div class="contact-details mb-4" style="margin-left: 10px;">
-                    <h2>Our Contact Details</h2>
-                    <p><strong>Enquiry Number:</strong> +918218666169</p>
-                    <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar (U.K.)</p>
+            <div class="row" >
+                <div class="col-md-6 text-center">
+                    <img src="../images/high-res/contact-us.png" alt="Contact Us Image" class="contact-img">
                 </div>
 
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form action="https://submit-form.com/E6ZwoX0G1" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="col-md-6">
+                    <p style="margin-left: 10px;">If you have any queries or would like more information about our courses, feel free to reach out to us. We are always here to assist you.</p>
+
+                    <div class="contact-details mb-4" style="margin-left: 10px;">
+                        <h2>Our Contact Details</h2>
+                        <p><strong>Enquiry Number:</strong> +918218666169</p>
+                        <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar, Uttarakhand, Bharat(India)</p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form action="https://submit-form.com/E6ZwoX0G1" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2"><a href="#">Facebook</a></li>
-            <li class="mx-2"><a href="#">Twitter</a></li>
-            <li class="mx-2"><a href="#">LinkedIn</a></li>
-        </ul>
-    </footer>
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

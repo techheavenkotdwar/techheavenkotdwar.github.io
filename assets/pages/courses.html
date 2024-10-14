@@ -10,46 +10,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
             color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-
-        header .logo img {
-            height: 50px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline; /* Aligns navigation items in a row */
-            margin-right: 20px; /* Space between items */
-        }
-
-        nav a {
-            color: white; /* Link color */
-            text-decoration: none; /* Remove underline from links */
-            transition: color 0.3s; /* Smooth transition for hover effect */
-        }
-
-        nav a:hover {
-            color: cyan; /* Change link color on hover */
-        }
-
-        nav a.active {
-            color: cyan; /* Change text color */
-            font-weight: bold; /* Make the text bold */
-            border-bottom: 2px solid cyan; /* Optional: Bottom border for highlight */
-            transition: all 0.3s ease; /* Smooth transition */
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
         }
 
         .courses-section {
@@ -69,90 +42,69 @@
             box-shadow: 0 0 20px cyan; /* Glow effect on hover */
         }
 
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center; /* Centered footer text */
-        }
-
-        footer a {
-            color: white; /* Link color in footer */
-            text-decoration: none; /* Remove underline from footer links */
-            transition: color 0.3s; /* Smooth transition for hover effect */
-        }
-
-        footer a:hover {
-            color: cyan; /* Change footer link color on hover */
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Header Section -->
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-md-3 logo">
-                <img src="../images/logo.png" alt="Tech Heaven Logo">
-            </div>
-            <div class="col-md-6">
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="courses.html" class="active">Courses</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="online.html">Online Courses</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 text-right">
-                <a href="enroll.html" class="btn btn-primary cta-btn">Enroll Now</a>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <!-- Courses Section -->
-    <section class="courses-section container">
-        <h1 class="text-center">Our Courses</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="course">
-                    <h2>CCA (Certificate in Computer Applications)</h2>
-                    <p>This course introduces students to the fundamentals of computer applications, including typing skills and MS Office basics.</p>
-                    <a href="../pages/cca.html" class="btn btn-primary">Learn More</a>
+    <main>
+        <!-- Courses Section -->
+        <section class="courses-section container">
+            <h1 class="text-center">Our Courses</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="course">
+                        <h2>CCA (Certificate in Computer Applications)</h2>
+                        <p>This course introduces students to the fundamentals of computer applications, including typing skills and MS Office basics.</p>
+                        <a href="../pages/cca.html" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="course">
-                    <h2>DCA (Diploma in Computer Applications)</h2>
-                    <p>The DCA program covers advanced topics in computer applications, including MS Excel and introduction to the internet.</p>
-                    <a href="../pages/dca.html" class="btn btn-primary">Learn More</a>
+                <div class="col-md-4">
+                    <div class="course">
+                        <h2>DCA (Diploma in Computer Applications)</h2>
+                        <p>The DCA program covers advanced topics in computer applications, including MS Excel and introduction to the internet.</p>
+                        <a href="../pages/dca.html" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="course">
-                    <h2>PDCA (Professional Diploma in Computer Applications)</h2>
-                    <p>Our PDCA course focuses on comprehensive skills, including multimedia graphics, web technologies, and DBMS.</p>
-                    <a href="../pages/pdca.html" class="btn btn-primary">Learn More</a>
+                <div class="col-md-4">
+                    <div class="course">
+                        <h2>PDCA (Professional Diploma in Computer Applications)</h2>
+                        <p>Our PDCA course focuses on comprehensive skills, including multimedia graphics, web technologies, and DBMS.</p>
+                        <a href="../pages/pdca.html" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
+                <!-- Add more courses as needed -->
             </div>
-            <!-- Add more courses as needed -->
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By  <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2"><a href="#">Facebook</a></li>
-            <li class="mx-2"><a href="#">Twitter</a></li>
-            <li class="mx-2"><a href="#">LinkedIn</a></li>
-        </ul>
-    </footer>
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
