@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tech Heaven</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/includes/index.css">
+</head>
+
+<body>
+
+      <!-- Skeleton Screen -->
+      <div id="skeleton-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-dark text-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Tech Heaven Logo" height="50">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/online.html">Online Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="assets/pages/enroll.html" class="btn btn-primary">Enroll Now</a>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section with Full-Screen GIF Backdrop -->
+        <section id="home" class="hero-section">
+            <div class="background-container">
+                <img src="assets/images/high-res/background.gif" alt="Background GIF" class="background-gif">
+            </div>
+            <div class="content-overlay">
+                <h1>Tech Heaven</h1>
+                <p>Empower your skills with industry-recognized computer courses.</p>
+                <div class="cta-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Our Courses</a>
+                    <a href="#online" class="btn btn-secondary">Get Started with Online Learning</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section container my-5">
+            <h2 class="text-center">Our Courses</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="course" style="background-image: url('assets/images/high-res/cca.png');">
+                        <div class="course-content">
+                            <h3>CCA (Certificate in Computer Applications)</h3>
+                            <p><!-- Add CCA description here --></p>
+                            <a href="assets/pages/cca.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course" style="background-image: url('assets/images/high-res/dca.png');">
+                        <div class="course-content">
+                            <h3>DCA (Diploma in Computer Applications)</h3>
+                            <p><!-- Add DCA description here --></p>
+                            <a href="assets/pages/dca.html" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course" style="background-image: url('assets/images/high-res/pdca.png');">
+                        <div class="course-content">
+                            <h3>PDCA (Professional Diploma in Computer Applications)</h3>
+                            <p><!-- Add PDCA description here --></p>
+                            <a href="assets/pages/pdca.html" class="btn btn-primary">Join Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Courses Section -->
+        <section id="online" class="online-section container my-5">
+            <h2 class="text-center">Online Courses</h2>
+            <div class="online-course">
+                <div class="course-content" style="position: absolute;">
+                    <h2>Learn from Anywhere with Our Online Courses</h2>
+                    <p><!-- Add online course description here --></p>
+                    <a href="assets/pages/online.html" class="btn btn-primary">Browse Online Courses</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- assets/includes/footer.html -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Tech Heaven. All rights reserved.</p>
+        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
+        <ul class="social-links list-unstyled d-flex justify-content-center">
+            <li class="mx-2">
+                <a href="#">
+                    <img src="assets/images/facebook.png" alt="facebook" class="social-icon" id="facebook-icon">
+                </a>
+            </li>
+            <li class="mx-2">
+                <a href="https://www.instagram.com/techheavenkotdwar/" target="_blank">
+                    <img src="assets/images/instagram.png" alt="instagram" class="social-icon" id="instagram-icon">
+                </a>
+            </li>
+            <li class="mx-2">
+                <a href="https://www.linkedin.com/in/tech-heaven-a86385329/" target="_blank">
+                    <img src="assets/images/linkedin.png" alt="linkedin" class="social-icon" id="linkedin-icon">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Hide the skeleton screen when the page fully loads
+        window.addEventListener('load', () => {
+            document.getElementById('skeleton-screen').classList.add('fade-out');
+        });
+    </script>
+
+
+</html>

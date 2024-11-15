@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enroll Now - Tech Heaven</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
+    <style>
+        body {
+            background-color: black;
+            color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
+        }
+
+        .enroll-section {
+            padding: 40px 0;
+        }
+
+        .enroll-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Media Query for 320px screen */
+        @media (max-width: 767px) {
+            .enroll-form {
+                border: 2px solid cyan;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 10px;
+                background-color: #111;
+                box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Enroll Section -->
+        <section class="enroll-section container">
+            <h1 class="text-center">Enroll Now</h1>
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="../images/high-res/enroll.png" alt="Enroll Image" class="enroll-img">
+                </div>
+
+                <div class="col-md-6">
+                    <p style="margin-left: 10px;">Join Tech Heaven and enroll in one of our professional courses. Fill out the form below to get started.</p>
+                    <div class="enroll-form">
+                        <h2>Enrollment Form</h2>
+                        <form action="https://submit-form.com/vx5f6Xdqs" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="father-name">Father's Name</label>
+                                <input type="text" id="father-name" name="father-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Your Address</label>
+                                <input type="text" id="address" name="address" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="qualification">Highest Qualification</label>
+                                <select id="qualification" name="qualification" class="form-control" required>
+                                    <option value="" disabled selected>Select your highest qualification</option>
+                                    <option value="Primary">Primary</option>
+                                    <option value="Secondary">Secondary</option>
+                                    <option value="High School">High School</option>
+                                    <option value="Senior Secondary">Senior Secondary</option>
+                                    <option value="Voactional and Traning (Diploma)">Voactional and Traning (Diploma)</option>
+                                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                    <option value="Master's Degree">Master's Degree</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Course You Want</label>
+                                <select id="course" name="course" class="form-control" required>
+                                    <option value="" disabled selected>Select the course you want</option>
+                                    <option value="CCA">CCA</option>
+                                    <option value="DCA">DCA</option>
+                                    <option value="PDCA">PDCA</option>
+                                    <option value="Introduction to Computer Basics (Online)">Introduction to Computer Basics (Online)</option>
+                                    <option value="Advanced Excel (Online)">Advanced Excel (Online)</option>
+                                    <option value="Web Development Basics">Web Development Basics (Online)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">A Message (optional)</label>
+                                <textarea id="message" name="message" class="form-control" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Enrollment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

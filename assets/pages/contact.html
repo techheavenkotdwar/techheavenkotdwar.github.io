@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us - Tech Heaven</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
+    <style>
+        body {
+            background-color: black;
+            color: cyan;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        
+        main {
+    flex: 1; /* This makes sure the main content takes up the remaining space */
+        }
+
+        .contact-section {
+            padding: 40px 0;
+        }
+
+        .contact-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Media Query for 320px screen */
+        @media (max-width: 767px) {
+            .contact-form {
+                border: 2px solid cyan;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 10px;
+                background-color: #111;
+                box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Contact Us Section -->
+        <section class="contact-section container">
+            <h1 class="text-center">Contact Us</h1>
+
+            <div class="row" >
+                <div class="col-md-6 text-center">
+                    <img src="../images/high-res/contact-us.png" alt="Contact Us Image" class="contact-img">
+                </div>
+
+                <div class="col-md-6">
+                    <p style="margin-left: 10px;">If you have any queries or would like more information about our courses, feel free to reach out to us. We are always here to assist you.</p>
+
+                    <div class="contact-details mb-4" style="margin-left: 10px;">
+                        <h2>Our Contact Details</h2>
+                        <p><strong>Enquiry Number:</strong> +918218666169</p>
+                        <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar, Uttarakhand, Bharat(India)</p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form action="https://submit-form.com/E6ZwoX0G1" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
