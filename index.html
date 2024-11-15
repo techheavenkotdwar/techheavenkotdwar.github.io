@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tech Heaven</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>About Us - Tech Heaven</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../includes/footer-pages.css">
+    <link rel="stylesheet" href="../includes/header-pages.css">
     <style>
         body {
             background-color: black;
@@ -19,150 +21,40 @@
             min-height: 100vh;
         }
 
-        /* Hover effects for links */
-        .nav-link,
-        .social-links a,
-        footer a {
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover,
-        .social-links a:hover,
-        footer a:hover {
-            color: cyan;
-            text-decoration: underline;
-        }
-
         main {
-    flex: 1; /* This makes sure the main content takes up the remaining space */
+            flex: 1;
         }
 
-        .hero-section {
-            position: relative;
-            text-align: center;
-            padding: 100px 0;
+        .about-section {
+            padding: 40px 0;
         }
 
-        .hero-section h1 {
-            font-size: 4rem;
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
             margin-bottom: 20px;
         }
 
-        .hero-section p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+        /* Responsive Map */
+        .google-maps {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 80%;
         }
 
-        .background-gif {
-            width: 100%;
-            height: auto;
+        .google-maps iframe {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -1;
-            opacity: 0.5;
-            object-fit: cover;
-            min-height: 100%;
-        }
-
-        .courses-section .course,
-        .online-section .online-course {
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-bottom: 20px;
-            transition: transform 0.2s;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .courses-section .course:hover,
-        .online-section .online-course:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px cyan;
-        }
-
-        .online-course {
-            height: 300px;
-            position: relative;
-        }
-
-        .online-course img {
-            height: 100%;
             width: 100%;
-            object-fit: cover;
-        }
-
-        .course-content {
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-        }
-
-        footer {
-            background-color: #111;
-            margin-top: auto;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        /* Social icon styling */
-        .social-icon {
-            width: 30px; /* Adjust the size as needed */
-            height: 30px; /* Adjust the size as needed */
-            transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
-        }
-
-        #facebook-icon {
-            content: url('assets/images/facebook.png'); /* Normal state image */
-        }
-
-        #facebook-icon:hover {
-            content: url('assets/images/facebook-hovered.png'); /* Hovered state image */
-            transform: scale(1.2); /* Slight zoom effect on hover */
-            opacity: 0.8; /* Slight transparency */
-        }
-
-        #instagram-icon {
-            content: url('assets/images/instagram.png'); /* Normal state image */
-        }
-
-        #instagram-icon:hover {
-            content: url('assets/images/instagram-hovered.png'); /* Hovered state image */
-            transform: scale(1.2); /* Slight zoom effect on hover */
-            opacity: 0.8; /* Slight transparency */
-        }
-
-        #linkedin-icon {
-            content: url('assets/images/linkedin.png'); /* Normal state image */
-        }
-
-        #linkedin-icon:hover {
-            content: url('assets/images/linkedin-hovered.png'); /* Hovered state image */
-            transform: scale(1.2); /* Slight zoom effect on hover */
-            opacity: 0.8; /* Slight transparency */
-        }
-
-        /* Media Queries for 320px screens */
-        @media (max-width: 320px) {
-            .cta-buttons a {
-                margin-bottom: 10px;
-            }
-
-            .nav-link {
-                font-size: 12px;
-            }
-
-            .nav {
-                flex-direction: column;
-            }
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
@@ -170,111 +62,68 @@
 <body>
 
     <!-- Header Section -->
-    <header class="bg-dark text-white">
-        <div class="container d-flex justify-content-between align-items-center py-3">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Tech Heaven Logo" height="50">
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="assets/pages/courses.html">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="assets/pages/about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="assets/pages/online.html">Online Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="assets/pages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="assets/pages/enroll.html" class="btn btn-primary">Enroll Now</a>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
+
     <main>
-        <!-- Hero Section with Full-Screen GIF Backdrop -->
-        <section id="home" class="hero-section">
-            <div class="background-container">
-                <img src="assets/images/high-res/background.gif" alt="Background GIF" class="background-gif">
-            </div>
-            <div class="content-overlay">
-                <h1>Tech Heaven</h1>
-                <p>Empower your skills with industry-recognized computer courses.</p>
-                <div class="cta-buttons">
-                    <a href="#courses" class="btn btn-primary">Explore Our Courses</a>
-                    <a href="#online" class="btn btn-secondary">Get Started with Online Learning</a>
-                </div>
-            </div>
-        </section>
+        <!-- About Us Section -->
+        <section class="about-section container">
+            <h1 class="text-center" style="font-size: 3rem; margin-right: 10px; margin-left: 10px;">About Tech Heaven</h1>
 
-        <!-- Courses Section -->
-        <section id="courses" class="courses-section container my-5">
-            <h2 class="text-center">Our Courses</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="course" style="background-image: url('assets/images/high-res/cca.png'); height: 200px;">
-                        <div class="course-content">
-                            <h3>CCA (Certificate in Computer Applications)</h3>
-                            <p><!-- Add CCA description here --></p>
-                            <a href="assets/pages/cca.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="course" style="background-image: url('assets/images/high-res/dca.png'); height: 200px;">
-                        <div class="course-content">
-                            <h3>DCA (Diploma in Computer Applications)</h3>
-                            <p><!-- Add DCA description here --></p>
-                            <a href="assets/pages/dca.html" class="btn btn-primary">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="course" style="background-image: url('assets/images/high-res/pdca.png'); height: 200px;">
-                        <div class="course-content">
-                            <h3>PDCA (Professional Diploma in Computer Applications)</h3>
-                            <p><!-- Add PDCA description here --></p>
-                            <a href="assets/pages/pdca.html" class="btn btn-primary">Join Today</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Image Area -->
+            <div class="about-image text-center">
+                <img src="../images/high-res/about-us.png" alt="Tech Heaven About Us Image">
             </div>
-        </section>
 
-        <!-- Online Courses Section -->
-        <section id="online" class="online-section container my-5">
-            <h2 class="text-center">Online Courses</h2>
-            <div class="online-course" style="background-image: url('assets/images/high-res/online.png'); height: 300px;">
-                <div class="course-content" style="position: absolute;">
-                    <h2>Learn from Anywhere with Our Online Courses</h2>
-                    <p><!-- Add online course description here --></p>
-                    <a href="assets/pages/online.html" class="btn btn-primary">Browse Online Courses</a>
-                </div>
-            </div>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                Welcome to <strong>Tech Heaven</strong>, where we are committed to providing quality education in the field of computer applications.
+                Established in the scenic city of <strong>Kotdwar, Uttarakhand</strong>, we strive to empower students with the knowledge and skills required to thrive in the tech-driven world.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                We are proud to be registered with <strong>DITRP</strong>, an ISO-certified agency that ensures our curriculum and operations meet the highest standards of education. Our team of experienced educators is dedicated to delivering a top-notch syllabus tailored to the needs of aspiring IT professionals.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                At <strong>Tech Heaven</strong>, our mission is simple – to make quality computer education accessible to everyone. Our students benefit from our carefully crafted courses, designed to equip them with both theoretical knowledge and practical skills.
+            </p>
+            <p style="margin-left: 10px; margin-right: 10px;">
+                With a focus on real-world applications and career growth, we offer a wide range of courses that cater to beginners, intermediates, and advanced learners. Whether you’re starting from scratch or looking to advance your IT career, Tech Heaven has something for you.
+            </p>
+            <h2 style="margin-left: 10px;">Our Location</h2>
+            <p style="margin-left: 10px; margin-right: 10px;">We are proudly based in <strong>Kotdwar, Uttarakhand, India</strong>, and serve students across the region and beyond.</p>
+            <p style="margin-left: 10px; margin-right: 10px;">The below given map can show you our location from heart of Kotdwar, (Jhanda Chowk).</p>
+        </section>
+        
+        <!-- Responsive Google Maps Section -->
+        <section class="google-maps container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1zjvUBdt-0diEPMljJucpETgEBiMcI58&ehbc=2E312F" allowfullscreen></iframe>
         </section>
     </main>
-    <!-- assets/includes/footer.html -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Tech Heaven. All rights reserved.</p>
-        <p>Crafted With Passion By <a href="https://github.com/DarkBarrier" target="_blank">Dark Barrier Hub</a></p>
-        <ul class="social-links list-unstyled d-flex justify-content-center">
-            <li class="mx-2">
-                <a href="#">
-                    <img src="assets/images/facebook.png" alt="facebook" class="social-icon" id="facebook-icon">
-                </a>
-            </li>
-            <li class="mx-2">
-                <a href="https://www.instagram.com/techheavenkotdwar/" target="_blank">
-                    <img src="assets/images/instagram.png" alt="instagram" class="social-icon" id="instagram-icon">
-                </a>
-            </li>
-            <li class="mx-2">
-                <a href="https://www.linkedin.com/in/tech-heaven-a86385329/" target="_blank">
-                    <img src="assets/images/linkedin.png" alt="linkedin" class="social-icon" id="linkedin-icon">
-                </a>
-            </li>
-        </ul>
-    </footer>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load the header -->
+    <script>
+        // Load the footer dynamically from header.html
+        fetch('../includes/header-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript to load the footer -->
+    <script>
+        // Load the footer dynamically from footer.html
+        fetch('../includes/footer-pages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
