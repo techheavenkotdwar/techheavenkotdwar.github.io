@@ -69,7 +69,8 @@
                     <p style="margin-left: 10px;">Join Tech Heaven and enroll in one of our professional courses. Fill out the form below to get started.</p>
                     <div class="enroll-form">
                         <h2>Enrollment Form</h2>
-                        <form action="https://submit-form.com/vx5f6Xdqs" method="POST">
+                        <script src="https://unpkg.com/@botpoison/browser" async></script>
+                        <form id ="form" action="https://submit-form.com/vx5f6Xdqs" method="POST" data-botpoison-public-key="pk_26759ed5-9524-4641-8512-93e669303a85">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -119,8 +120,31 @@
                                 <label for="message">A Message (optional)</label>
                                 <textarea id="message" name="message" class="form-control" rows="5"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit Enrollment</button>
+                            <button type="submit" id="submit-button" class="btn btn-primary">Submit Enrollment</button>
                         </form>
+                        <script>
+                            var formElement = document.getElementById("form");
+                            var buttonElement = document.getElementById("submit-button");
+
+                            formElement.addEventListener("botpoison-challenge-start", function () {
+                                buttonElement.setAttribute("disabled", "disabled");
+                            });
+
+                            formElement.addEventListener("botpoison-challenge-success", function () {
+                                buttonElement.removeAttribute("disabled");
+                            });
+
+                            formElement.addEventListener("botpoison-challenge-error", function () {
+                                buttonElement.removeAttribute("disabled");
+                            });
+
+                            formElement.addEventListener("submit", function(event) {
+                                buttonElement.setAttribute("disabled", "disabled");
+                                setTimeout(() => {
+                                    buttonElement.removeAttribute("disabled");
+                                }, 5000);
+                            });
+						</script>
                     </div>
                 </div>
             </div>
