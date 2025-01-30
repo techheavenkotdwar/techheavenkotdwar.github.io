@@ -71,14 +71,16 @@
 
                     <div class="contact-details mb-4" style="margin-left: 10px;">
                         <h2>Our Contact Details</h2>
-                        <p><strong>Enquiry Number:</strong> +918218666169</p>
+                        <p><strong>Enquiry Number:</strong> +91-8218666169, +91-8194011356</p>
                         <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar, Uttarakhand, Bharat(India)</p>
                     </div>
+
+                    <script src="https://unpkg.com/@botpoison/browser" async></script>
 
                     <!-- Contact Form -->
                     <div class="contact-form">
                         <h2>Send Us a Message</h2>
-                        <form action="https://submit-form.com/E6ZwoX0G1" method="POST">
+                        <form id ="form" action="https://submit-form.com/E6ZwoX0G1" method="POST" data-botpoison-public-key="pk_xxxxxxxx">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -91,8 +93,31 @@
                                 <label for="message">Your Message</label>
                                 <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" id="submit-button" class="btn btn-primary">Send Message</button>
                         </form>
+                        <script>
+                            var formElement = document.getElementById("form");
+                            var buttonElement = document.getElementById("submit-button");
+
+                            formElement.addEventListener("botpoison-challenge-start", function () {
+                                buttonElement.setAttribute("disabled", "disabled");
+                            });
+
+                            formElement.addEventListener("botpoison-challenge-success", function () {
+                                buttonElement.removeAttribute("disabled");
+                            });
+
+                            formElement.addEventListener("botpoison-challenge-error", function () {
+                                buttonElement.removeAttribute("disabled");
+                            });
+
+                            formElement.addEventListener("submit", function(event) {
+                                buttonElement.setAttribute("disabled", "disabled");
+                                setTimeout(() => {
+                                    buttonElement.removeAttribute("disabled");
+                                }, 5000);
+                            });
+												</script>
                     </div>
                 </div>
             </div>
