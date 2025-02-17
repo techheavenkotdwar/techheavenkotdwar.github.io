@@ -8,7 +8,8 @@
     <title>Tech Heaven</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
+    <!-- Preload and Load CSS First -->
+    <link rel="preload" href="assets/includes/index.css" as="style">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/includes/index.css">
 </head>
@@ -41,7 +42,8 @@
         <!-- Hero Section with Full-Screen GIF Backdrop -->
         <section id="home" class="hero-section">
             <div class="background-container">
-                <img src="assets/images/high-res/background.gif" alt="Background GIF" class="background-gif">
+                <img src="assets/images/high-res/background.jpg" alt="Background Image" class="background-gif" id="background-placeholder">
+                <img data-src="assets/images/high-res/background.gif" alt="Background GIF" class="background-gif" id="background-gif" style="display: none;">
             </div>
             <div class="content-overlay">
                 <h1>Tech Heaven</h1>
@@ -127,11 +129,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Hide the skeleton screen when the page fully loads
-        window.addEventListener('load', () => {
-            document.getElementById('skeleton-screen').classList.add('fade-out');
+        // Hide skeleton screen once CSS & DOM is ready
+        document.addEventListener("DOMContentLoaded", () => {
+    const skeletonScreen = document.getElementById('skeleton-screen');
+    const images = document.querySelectorAll("img:not([data-src])");
+    let imagesLoaded = 0;
+    
+    function checkAllImagesLoaded() {
+        if (imagesLoaded === images.length) {
+            skeletonScreen.classList.add('fade-out');
+        }
+    }
+    
+    images.forEach(img => {
+        if (img.complete) {
+            imagesLoaded++;
+            checkAllImagesLoaded();
+        } else {
+            img.addEventListener("load", () => {
+                imagesLoaded++;
+                checkAllImagesLoaded();
+            });
+            img.addEventListener("error", () => {
+                imagesLoaded++;
+                checkAllImagesLoaded();
+            });
+        }
+    });
+});
+    
+        // Lazy load GIF
+        window.addEventListener("load", () => {
+            const gif = document.getElementById("background-gif");
+            const placeholder = document.getElementById("background-placeholder");
+            
+            const tempImg = new Image();
+            tempImg.src = gif.getAttribute("data-src");
+            tempImg.onload = () => {
+                gif.src = tempImg.src;
+                gif.style.display = "block";
+                placeholder.style.display = "none";
+            };
         });
     </script>
 
-
-</html>
+</html> 
