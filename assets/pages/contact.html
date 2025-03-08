@@ -21,9 +21,10 @@
             min-height: 100vh;
         }
 
-        
+
         main {
-    flex: 1; /* This makes sure the main content takes up the remaining space */
+            flex: 1;
+            /* This makes sure the main content takes up the remaining space */
         }
 
         .contact-section {
@@ -61,26 +62,26 @@
         <section class="contact-section container">
             <h1 class="text-center">Contact Us</h1>
 
-            <div class="row" >
+            <div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="../images/high-res/contact-us.png" alt="Contact Us Image" class="contact-img" loading="lazy">
+                    <img src="../images/high-res/contact-us.png" alt="Contact Us Image" class="contact-img"
+                        loading="lazy">
                 </div>
-
                 <div class="col-md-6">
-                    <p style="margin-left: 10px;">If you have any queries or would like more information about our courses, feel free to reach out to us. We are always here to assist you.</p>
+                    <p style="margin-left: 10px;">If you have any queries or would like more information about our
+                        courses, feel free to reach out to us. We are always here to assist you.</p>
 
                     <div class="contact-details mb-4" style="margin-left: 10px;">
                         <h2>Our Contact Details</h2>
                         <p><strong>Enquiry Number:</strong> +91-8218666169, +91-8194011356</p>
-                        <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor, Kotdwar, Uttarakhand, Bharat(India)</p>
+                        <p><strong>Address:</strong> Jai Shri Complex, Opposite Ashirwad Motel, Mawakot Road, Nimbuchor,
+                            Kotdwar, Uttarakhand, Bharat(India)</p>
                     </div>
-
-                    <script src="https://unpkg.com/@botpoison/browser" async></script>
 
                     <!-- Contact Form -->
                     <div class="contact-form">
                         <h2>Send Us a Message</h2>
-                        <form id ="form" action="https://submit-form.com/E6ZwoX0G1" method="POST" data-botpoison-public-key="pk_26759ed5-9524-4641-8512-93e669303a85">
+                        <form onsubmit="return sendEmail(event)">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -96,30 +97,27 @@
                             <button type="submit" id="submit-button" class="btn btn-primary">Send Message</button>
                         </form>
                         <script>
-                            var formElement = document.getElementById("form");
-                            var buttonElement = document.getElementById("submit-button");
+                            function sendEmail(event) {
+                                event.preventDefault(); // Prevent form from submitting the default way
 
-                            formElement.addEventListener("botpoison-challenge-start", function () {
-                                buttonElement.setAttribute("disabled", "disabled");
-                            });
+                                let name = document.getElementById('name').value.trim();
+                                let email = document.getElementById('email').value.trim();
+                                let message = document.getElementById('message').value.trim();
 
-                            formElement.addEventListener("botpoison-challenge-success", function () {
-                                buttonElement.removeAttribute("disabled");
-                            });
+                                if (!name || !email || !message) {
+                                    alert("Please fill in all required fields.");
+                                    return false;
+                                }
 
-                            formElement.addEventListener("botpoison-challenge-error", function () {
-                                buttonElement.removeAttribute("disabled");
-                            });
-
-                            formElement.addEventListener("submit", function(event) {
-                                buttonElement.setAttribute("disabled", "disabled");
-                                setTimeout(() => {
-                                    buttonElement.removeAttribute("disabled");
-                                }, 5000);
-                            });
-			</script>
+                                let subject = 'Hi@TechHeavenKotdwar';
+                                let mailtoLink = `https://mail.google.com/mail/?view=cm&to=support@techheavenkotdwar.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\n\nE-mail: ' + email + '\n\nMessage: ' + message)}`;
+                                window.open(mailtoLink, '_self');
+                                return true;
+                            }
+                        </script>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -129,22 +127,22 @@
 
     <!-- JavaScript to load the header -->
     <script>
-        // Load the footer dynamically from header.html
-        fetch('../includes/header-pages.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
+                                // Load the footer dynamically from header.html
+                                fetch('../includes/header-pages.html')
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById('header-placeholder').innerHTML = data;
+                                    });
     </script>
 
     <!-- JavaScript to load the footer -->
     <script>
-        // Load the footer dynamically from footer.html
-        fetch('../includes/footer-pages.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+            // Load the footer dynamically from footer.html
+            fetch('../includes/footer-pages.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
     </script>
 
     <!-- Bootstrap JS and dependencies -->
@@ -152,4 +150,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
